@@ -244,16 +244,15 @@ Vous pouvez consulter l’état de votre configuration IKE avec les commandes su
 
 ---
 
-**Réponse :**  
+**Réponse :**  La commande nous résume toute la configuration d'IKE que nous venons de préparer, l’algorithme de chiffrement, la méthode de hachage, le groupe de Diffie-Hellman ,le lifetime (le temps de vie de la *Security Appliance* avant le renouvellement)
 
 ---
-
 
 **Question 5: Utilisez la commande `show crypto isakmp key` et faites part de vos remarques :**
 
 ---
 
-**Réponse :**  
+**Réponse :**  La commande nous retourne les clé partagé avec les autres routeurs.
 
 ---
 
@@ -363,7 +362,6 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 
 En vous appuyant sur les notions vues en cours et vos observations en laboratoire, essayez de répondre aux questions. À chaque fois, expliquez comment vous avez fait pour déterminer la réponse exacte (capture, config, théorie, ou autre).
 
-
 **Question 8: Déterminez quel(s) type(s) de protocole VPN a (ont) été mis en œuvre (IKE, ESP, AH, ou autre).**
 
 ---
@@ -371,7 +369,6 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 **Réponse :**  
 
 ---
-
 
 **Question 9: Expliquez si c’est un mode tunnel ou transport.**
 
@@ -381,7 +378,6 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-
 **Question 10: Expliquez quelles sont les parties du paquet qui sont chiffrées. Donnez l’algorithme cryptographique correspondant.**
 
 ---
@@ -390,7 +386,6 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-
 **Question 11: Expliquez quelles sont les parties du paquet qui sont authentifiées. Donnez l’algorithme cryptographique correspondant.**
 
 ---
@@ -398,7 +393,6 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 **Réponse :**  
 
 ---
-
 
 **Question 12: Expliquez quelles sont les parties du paquet qui sont protégées en intégrité. Donnez l’algorithme cryptographique correspondant.**
 

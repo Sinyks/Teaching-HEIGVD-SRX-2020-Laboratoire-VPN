@@ -145,7 +145,7 @@ Pour votre topologie il est utile de contrôler la connectivité entre :
 
 ---
 
-**Réponse :**  tout les ping se sont correctement déroulé, la machine Hôte VPc avait quant à elle besoin d'une adresse ip nous avons corrigé cela avec la commande ``ip dhcp``.
+**Réponse :**  tout les ping se sont correctement déroulé, la machine Hôte VPC avait quant à elle besoin d'une adresse ip nous avons corrigé cela avec la commande ``ip dhcp``.
 
 ---
 
@@ -163,12 +163,17 @@ Pour déclencher et pratiquer les captures vous allez « pinger » votre routeur
 -	Une trace sniffer (Wireshark) à la sortie du routeur R2 vers Internet. Si vous ne savez pas utiliser Wireshark avec eve-ng, référez-vous au document explicatif eve-ng. Le filtre de **capture** (attention, c'est un filtre de **capture** et pas un filtre d'affichage) suivant peut vous aider avec votre capture : `ip host 193.100.100.1`. 
 -	Les messages de R1 avec `debug ip icmp`.
 
-
-**Question 3: Montrez vous captures**
+**Question 3: Montrez vos captures**
 
 ---
 
 **Screenshots :**  
+### ping debug depuis R2
+![](./images/ping_R2.png)
+### ping debug depuis R1
+![](./images/ping_R1.png)
+### ping capture sur wireshark
+![](./images/ping_R2-R1_wireshark.png)
 
 ---
 

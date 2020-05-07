@@ -361,6 +361,15 @@ Mieux encore nous pouvons observer les paquets transmis par R2 au moment du Ping
 
 **Réponse :**  
 
+### lifetime (IKE)
+Cette valeur représente la durée pendant laquelle les opérations d'échange de clés et d'authentification doivent se dérouler afin de s'assurer qu'aucun désagrément n'est survenu.
+
+ref : [](https://forums.juniper.net/t5/SRX-Services-Gateway/IKE-life-time-VS-IPSEC-life-time/td-p/140937)
+
+### lifetime (IPsec)
+
+Le champ lifetime de la configuration d'IPsec correspond au temps de vie de l'association de sécurité (SA), une nouvelle SA devra être créer quand l'on arrive au bout de ce timer. 
+
 ---
 
 
@@ -372,7 +381,11 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  Selon les capture effectué au sortant du routeur R2 ci-dessous
+
+![](/home/splinux/Documents/code/git/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-VPN/images/isakmp-capture.png)
+
+On observe l'utilisation du protocol IKE pour la négociation des clé (ISAKMP) et ESP pour l'encapsualtion des paquets.
 
 ---
 
@@ -380,7 +393,20 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  Nous observons dans la configuration de notre routeur que IPsec est configuré en mode tunnel
+
+via la commande entrée plus haut
+
+```
+crypto ipsec transform-set STRONG esp-aes 192 esp-sha-hmac 
+  mode tunnel
+```
+
+Ainsi le *transforme set* (la collection d'algorithme et de protocole de sécurité) sera configuré en mode tunnel
+
+On peut le vérifier via la commande  ``show crypto ipsec transform-set``
+
+![](./images/Tunel-mode.png)
 
 ---
 
@@ -388,7 +414,9 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  En mode tunnel c'est l'entier du paquets qui sera chiffré et de nouvelles entêtes seront ajouté. L'algorithme de chiffrement utilisé pour ça est l'algorithmes AES-192
+
+![](/home/splinux/Documents/code/git/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-VPN/images/Tunel-mode.png)
 
 ---
 
@@ -396,7 +424,9 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 ---
 
-**Réponse :**  
+**Réponse :**  En mode tunnel l'entier du paquet est authentifié et l'algorithme utilisé pour cela est HMAC
+
+![](./images/Tunel-mode.png)
 
 ---
 

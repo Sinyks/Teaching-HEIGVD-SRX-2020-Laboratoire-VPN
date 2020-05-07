@@ -345,7 +345,13 @@ Pensez à démarrer votre sniffer sur la sortie du routeur R2 vers internet avan
 
 ---
 
-**Réponse :**  
+**Réponse :**  Une fois la configuration d'ipsec terminé nous avons lancé un ping sur le routeur depuis le poste utilisateur nous remarquons ainsi lors du ping, la réaction du routeur R1:
+
+![](./images/VPN-ping.png)
+
+Mieux encore nous pouvons observer les paquets transmis par R2 au moment du Ping
+
+![](./images/isakmp-capture.png)
 
 ---
 

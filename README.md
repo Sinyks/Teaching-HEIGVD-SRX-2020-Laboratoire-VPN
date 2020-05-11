@@ -434,7 +434,9 @@ On peut le vérifier via la commande  ``show crypto ipsec transform-set``
 
 ---
 
-**Réponse :**  
+**Réponse :**  En mode tunnel le paquet entier est protéger et l'algorithme ici est également SHA-HMAC pour la protection de l'intégrité.
+
+https://fr.wikipedia.org/wiki/Keyed-hash_message_authentication_code
 
 ---
 

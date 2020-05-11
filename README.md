@@ -442,5 +442,7 @@ https://fr.wikipedia.org/wiki/Keyed-hash_message_authentication_code
 
 ### Source pour les algorithme de chiffrement
 
+https://www.cisco.com/c/en/us/td/docs/ios/12_2/security/command/reference/srfipsec.html#wp1017694
+
 ![](./images/transformType.png)
 

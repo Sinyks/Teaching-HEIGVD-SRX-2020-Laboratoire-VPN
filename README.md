@@ -361,14 +361,18 @@ Mieux encore nous pouvons observer les paquets transmis par R2 au moment du Ping
 
 **Réponse :**  
 
-### lifetime (IKE)
-Cette valeur représente la durée pendant laquelle les opérations d'échange de clés et d'authentification doivent se dérouler afin de s'assurer qu'aucun désagrément n'est survenu.
+IKE se composant de deux phases, une qui s'occupe d'établir un canal sécurisé qui permet authentification de la source, l'intégrité et la confidentialité des données ainsi que la protection contre la réinjection. C'est la phase 1, la phase 2 va utiliser la phase 1 afin d'effectuer la négotiation des paramètres pour les SAs, la dérivation des clés IPSec ainsi que l'établissement des SAs et/ou leur renégociation.
 
-[reférence](https://forums.juniper.net/t5/SRX-Services-Gateway/IKE-life-time-VS-IPSEC-life-time/td-p/140937)
+Les différents timers correspondent au temps (ou au volume de données) pendant lequel les deux phases utilisent ce qu'elles ont définies. Lorsque ces timers arrivent à leur terme la phase correspondante est réexécutée (renégociée). On recommande de mettre un timer de la phase 2 plus court que le timer de la phase 1.
 
-### lifetime (IPsec)
+lifetime phase 1 (IKE → ISAKMP)
 
-Le champ lifetime de la configuration d'IPsec correspond au temps de vie de l'association de sécurité (SA), une nouvelle SA devra être créer quand l'on arrive au bout de ce timer. 
+lifetime phase 2 (IKE → IPsec)
+
+Sources :
+
+-  https://documentation.meraki.com/zGeneral_Administration/Tools_and_Troubleshooting/Networking_Fundamentals%3A_IPSec_and_IKE
+- https://forums.juniper.net/t5/SRX-Services-Gateway/IKE-life-time-VS-IPSEC-life-time/td-p/140937
 
 ---
 
@@ -416,7 +420,7 @@ On peut le vérifier via la commande  ``show crypto ipsec transform-set``
 
 **Réponse :**  En mode tunnel c'est l'entier du paquets qui sera chiffré et de nouvelles entêtes seront ajouté. L'algorithme de chiffrement utilisé pour ça est l'algorithmes AES-192
 
-![](/home/splinux/Documents/code/git/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-VPN/images/Tunel-mode.png)
+![](./images/Tunel-mode.png)
 
 ---
 
@@ -434,7 +438,7 @@ On peut le vérifier via la commande  ``show crypto ipsec transform-set``
 
 ---
 
-**Réponse :**  En mode tunnel le paquet entier est protéger et l'algorithme ici est également SHA-HMAC pour la protection de l'intégrité.
+**Réponse :**  En mode tunnel le paquet entier est protégé et l'algorithme ici est également SHA-HMAC pour la protection de l'intégrité.
 
 https://fr.wikipedia.org/wiki/Keyed-hash_message_authentication_code
 

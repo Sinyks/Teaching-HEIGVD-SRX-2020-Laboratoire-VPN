@@ -424,7 +424,7 @@ On peut le vérifier via la commande  ``show crypto ipsec transform-set``
 
 ---
 
-**Réponse :**  En mode tunnel l'entier du paquet est authentifié et l'algorithme utilisé pour cela est HMAC
+**Réponse :**  En mode tunnel l'entier du paquet est authentifié et l'algorithme utilisé pour cela est SHA-HMAC
 
 ![](./images/Tunel-mode.png)
 
@@ -437,3 +437,8 @@ On peut le vérifier via la commande  ``show crypto ipsec transform-set``
 **Réponse :**  
 
 ---
+
+### Source pour les algorithme de chiffrement
+
+![](./images/transformType.png)
+

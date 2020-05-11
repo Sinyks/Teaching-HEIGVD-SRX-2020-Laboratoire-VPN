@@ -364,7 +364,7 @@ Mieux encore nous pouvons observer les paquets transmis par R2 au moment du Ping
 ### lifetime (IKE)
 Cette valeur représente la durée pendant laquelle les opérations d'échange de clés et d'authentification doivent se dérouler afin de s'assurer qu'aucun désagrément n'est survenu.
 
-ref : [](https://forums.juniper.net/t5/SRX-Services-Gateway/IKE-life-time-VS-IPSEC-life-time/td-p/140937)
+[reférence](https://forums.juniper.net/t5/SRX-Services-Gateway/IKE-life-time-VS-IPSEC-life-time/td-p/140937)
 
 ### lifetime (IPsec)
 

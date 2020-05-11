@@ -13,7 +13,7 @@ Clonez le repo sur votre machine. Vous pouvez répondre aux questions en modifia
 **N'oubliez pas de spécifier les noms des membres du groupes dans la Pull Request ainsi que dans le mail de rendu !!!**
 
 
-## Echéance 
+## Échéance 
 
 Ce travail devra être rendu le dimanche après la fin de la 2ème séance de laboratoire, soit au plus tard, **le 11 mai 2020, à 23h59.**
 
@@ -387,7 +387,7 @@ En vous appuyant sur les notions vues en cours et vos observations en laboratoir
 
 **Réponse :**  Selon les capture effectué au sortant du routeur R2 ci-dessous
 
-![](/home/splinux/Documents/code/git/SRX/Teaching-HEIGVD-SRX-2020-Laboratoire-VPN/images/isakmp-capture.png)
+![](./images/isakmp-capture.png)
 
 On observe l'utilisation du protocol IKE pour la négociation des clé (ISAKMP) et ESP pour l'encapsualtion des paquets.
 
@@ -444,7 +444,7 @@ https://fr.wikipedia.org/wiki/Keyed-hash_message_authentication_code
 
 ---
 
-### Source pour les algorithme de chiffrement
+### Source pour les algorithmes de chiffrement
 
 https://www.cisco.com/c/en/us/td/docs/ios/12_2/security/command/reference/srfipsec.html#wp1017694
 
